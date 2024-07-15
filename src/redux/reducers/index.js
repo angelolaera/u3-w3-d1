@@ -20,7 +20,7 @@ const mainReducer = (state = initialsState, action) => {
         ...state,
         favourites: {
           ...state.favourites,
-          content: state.favourites.content.filter((work) => work !== action.payload),
+          content: state.favourites.content.filter((work) => work._id !== action.payload),
         },
       };
     default:
